@@ -18,7 +18,7 @@ before_script:
 Lint_Check:
   stage: lint
   image:
-    name: hadolint/hadolint
+    name: pipelinecomponents/hadolint
   script:
     - hadolint --ignore="SC2086" - < ./flexible_artifacts/${GL_KETCHUP_NAME}/Dockerfile
     - hadolint - < ./flexible_artifacts/${GL_KETCHUP_NGINX_NAME}/Dockerfile
